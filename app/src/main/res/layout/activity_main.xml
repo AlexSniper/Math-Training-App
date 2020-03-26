@@ -8,211 +8,207 @@
     android:orientation="horizontal">
 
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="MissingConstraints">
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/goButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="119dp"
-            android:layout_marginRight="119dp"
-            android:layout_marginBottom="149dp"
             android:background="#8BC34A"
             android:onClick="start"
             android:padding="40dp"
             android:text="Go"
             android:textSize="60dp"
             android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="211dp"
+            tools:ignore="MissingConstraints" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/list_item_height"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            tools:ignore="MissingConstraints"
-
-            >
-
-
-            <TextView
-                android:id="@+id/secondsTextView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="2"
-                android:background="#FFEB3B"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="30s" />
-
-            <TextView
-
-            android:id="@+id/sumTextView"
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Hello World!"
-            android:layout_weight="1.5"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            tools:ignore="MissingConstraints">
 
-            <TextView
-                android:id="@+id/scoreTextView"
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:layout_weight="2"
-                android:background="#00BCD4"
-                android:gravity="center"
-                android:text="1" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/linearLayout"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-
-            tools:ignore="MissingConstraints"
-
-            >
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:background="#F44336"
-                android:gravity="center"
-                android:tag="0"
-                android:onClick="chooseAnswer"
-                android:text="1" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_marginRight="10dp"
                 android:layout_height="@dimen/list_item_height"
-                android:layout_weight="1"
-                android:text="2"
-                android:background="@android:color/holo_purple"
-                android:gravity="center"
-                android:tag="1"
-                android:onClick="chooseAnswer"
-                tools:layout_editor_absoluteX="265dp"
-                tools:layout_editor_absoluteY="147dp" />
-        </LinearLayout>
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/secondsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:background="#FFEB3B"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="30s" />
+
+                <TextView
+
+                    android:id="@+id/sumTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="Hello World!"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/scoreTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:background="#00BCD4"
+                    android:gravity="center"
+                    android:text="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+
+                tools:ignore="MissingConstraints"
+
+                >
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#F44336"
+                    android:gravity="center"
+                    android:onClick="chooseAnswer"
+                    android:tag="0"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_height"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_purple"
+                    android:gravity="center"
+                    android:onClick="chooseAnswer"
+                    android:tag="1"
+                    android:text="2"
+                    tools:layout_editor_absoluteX="265dp"
+                    tools:layout_editor_absoluteY="147dp" />
+            </LinearLayout>
 
 
             <LinearLayout
                 android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="0.5dp"
                 android:layout_below="@id/linearLayout1"
-                tools:ignore="MissingConstraints"
-                >
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/list_item_height"
-                android:text="3"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:onClick="chooseAnswer"
-                android:background="#2196F3"
-                android:gravity="center"
-                android:tag="2"
-                />
+                android:layout_marginTop="0.5dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_item_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="#2196F3"
+                    android:gravity="center"
+                    android:onClick="chooseAnswer"
+                    android:tag="2"
+                    android:text="3" />
 
                 <Button
                     android:id="@+id/button4"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="10dp"
                     android:layout_height="@dimen/list_item_height"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:text="4"
                     android:background="#8BC34A"
                     android:gravity="center"
-                    android:tag="3"
                     android:onClick="chooseAnswer"
+                    android:tag="3"
+                    android:text="4"
                     tools:layout_editor_absoluteX="265dp"
                     tools:layout_editor_absoluteY="147dp" />
 
 
-        </LinearLayout>
+            </LinearLayout>
 
 
-
-        <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="vertical"
-            android:layout_below="@id/linearLayout3"
-            tools:ignore="MissingConstraints"
-
-            >
-
-
-
-            <Button
-
-                android:id="@+id/button5"
+            <LinearLayout
+                android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Reset" />
+                android:layout_below="@id/linearLayout3"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+
+                >
 
 
+                <Button
 
-        </LinearLayout>
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="playAgain"
+                    android:text="Reset"
+                    android:visibility="invisible" />
 
 
-        <LinearLayout
-            android:id="@+id/linearLayout5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:orientation="horizontal"
-            android:layout_below="@id/linearLayout4"
-            tools:ignore="MissingConstraints"
+            </LinearLayout>
 
-            >
 
-            <TextView
-                android:id="@+id/gameOverTextView"
+            <LinearLayout
+                android:id="@+id/linearLayout5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_weight="1"
-                android:text=""
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-          />
-        </LinearLayout>
+                android:layout_below="@id/linearLayout4"
+                android:layout_marginTop="55dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints"
 
-    </RelativeLayout>
+                >
+
+                <TextView
+                    android:id="@+id/gameOverTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+                />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
